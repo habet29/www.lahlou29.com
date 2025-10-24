@@ -1,0 +1,15 @@
+
+services:
+  - type: web
+    name: rlreparation-backend
+    env: node
+    repo: .
+    root: backend
+    buildCommand: npm install
+    startCommand: npm run start
+  - type: static
+    name: rlreparation-frontend
+    repo: .
+    root: frontend
+    buildCommand: npm run build
+    staticPublishPath: dist
